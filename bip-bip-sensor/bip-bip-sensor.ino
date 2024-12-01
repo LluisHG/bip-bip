@@ -10,7 +10,7 @@ int sensor_04_ECHO_PIN = 8;
 int sensor_04_TRIG_PIN = 9;
 int BUZZER_PIN = 10;
 int LED_PIN = 12;
-int NUMBER_OF_SENSORS = 2;
+const int NUMBER_OF_SENSORS = 4;
 int SAFETY_DISTANCE = 50; // Centimeters
 int BAUD_RATE = 9600;
 
@@ -25,7 +25,7 @@ long distances_read[NUMBER_OF_SENSORS];
 
 void setup() {
   initializeSensors();
-  Serial.begin(9600);
+  Serial.begin(BAUD_RATE);
 }
 
 void loop() {
